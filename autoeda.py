@@ -33,9 +33,9 @@ def generate_eda_report(df, target_column=None):
     tmp_file = f"outputs/ydata_{uuid.uuid4().hex}.html"
     profile.to_file(tmp_file)
 
-    # Read the report content for download
-    with open(tmp_file, "rb") as f:
-        report_bytes = f.read()
+    # # Read the report content for download
+    # with open(tmp_file, "rb") as f:
+    #     report_bytes = f.read()
 
     # # Streamlit download button
     # st.download_button(
@@ -45,9 +45,9 @@ def generate_eda_report(df, target_column=None):
     #     mime="text/html",
     # )
 
-    # Optionally show it inside Streamlit
-    with open(tmp_file, "r", encoding="utf-8") as f:
-        st.components.v1.html(f.read(), height=800, scrolling=True)
+    # # Optionally show it inside Streamlit
+    # with open(tmp_file, "r", encoding="utf-8") as f:
+    #     st.components.v1.html(f.read(), height=800, scrolling=True)
 
     return tmp_file
 
