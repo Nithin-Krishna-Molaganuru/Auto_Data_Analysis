@@ -1,4 +1,4 @@
-🚀 AutoDA — Automated Data Analysis and Machine Learning Platform
+🚀 Automated Data Analysis and Machine Learning Platform
 📊 End-to-End Data Exploration, Visualization & AutoML in One Click
 
 AutoDA is an interactive Streamlit web app that simplifies data analysis, exploration, and model building for beginners, analysts, and data scientists.
@@ -20,19 +20,16 @@ Supports LightGBM, XGBoost, and CatBoost seamlessly.
 
 Displays metrics like accuracy, precision, recall, F1-score, and ROC-AUC.
 
-✅ Interactive Dashboard
-
-Clean, user-friendly Streamlit interface.
-
-Real-time visualizations and downloadable reports.
-
 ✅ AI Insights (Experimental)
 
 Uses Hugging Face Inference API to generate natural-language insights about dataset patterns and trends.
 
 Helps users interpret results in plain English.
 
+
+
 🏗️ Tech Stack
+
 Layer	Technology
 Frontend/UI	Streamlit
 Backend	Python
@@ -41,6 +38,7 @@ EDA & Visualization	Pandas, NumPy, Matplotlib, Seaborn, ydata-profiling
 Modeling Frameworks	LightGBM, XGBoost, CatBoost
 AI Insight Engine	Hugging Face API
 File Handling	openpyxl, requests
+
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/AutoDA.git
@@ -58,12 +56,11 @@ pip install -r requirements.txt
 Create a .streamlit/secrets.toml file or set environment variables:
 
 HF_TOKEN = "your_huggingface_api_token_here"
-
-
 (Make sure not to commit your token to GitHub)
 
 5️⃣ Run the App
 streamlit run app.py
+
 
 ☁️ Deployment
 
@@ -77,6 +74,7 @@ Render
 
 Vercel (via Python backend)
 
+
 🧩 Folder Structure
 AutoDA/
 │
@@ -85,6 +83,8 @@ AutoDA/
 ├── README.md             # Project documentation
 ├── data/                 # Uploaded datasets (ignored in .gitignore)
 └── assets/               # Visuals, logos, or static files
+
+
 
 🔍 Example Use Case
 
@@ -96,6 +96,8 @@ Automatically build and validate ML models (classification/regression)
 
 View AI-driven insights explaining patterns and relationships
 
+
+
 🏆 Project Highlights
 
 Built with modular code design for scalability.
@@ -106,20 +108,26 @@ Demonstrates data analyst + product-building mindset.
 
 Ready for portfolio showcase and production deployment.
 
-💡 Future Enhancements
 
-Custom visualization panel with drag-and-drop charts
 
-Integration with Google Sheets / BigQuery
+⚠️ Precautions and 🚧 Limitations
 
-Option to export trained models
+This is a app suitable for smaller datasets which doesnt have high token size
 
-Enhanced AI interpretation (LLM-based analytics summaries)
+This is not a complete replacement for Data Anlaysis, as every dataset is unique and each requires specific processing to get accurate results.
+
+This is a best tool for Beginners and Amateurs, and helpful for AutoEDA tasks for professionals in reducing the step of EDA even for Large Datasets.
+
+ML predictions are not posiible for every dataset for the reason that it requires extensive preprocessing and data structuring to fit in the models and estimators, thus few datasets might not get any ML Predictions, thus AI Insights
+
+AI insights could to restricted for few datasets for the fact that more tokens analysis required stronger models which are not economical, thus when low end models are used they can't handle much of data at a time, thus resulting in crashes or errors.
+
+
 
 👨‍💻 Author
 
-Nithin M.
-🎓 B.F.Sc Graduate → Aspiring Data Analyst | Entrepreneur in Tech
-📧 [your.email@example.com]
-🌐 LinkedIn
- | GitHub
+Nithin Krishna Molaganuru
+Aspiring Data Analyst | Entrepreneur in Tech
+E-Mail : nithinkrishnamolaganuru@gmail.com
+LinkedIn : www.linkedin.com/in/nithin-krishna-molaganuru
+GitHub : 
