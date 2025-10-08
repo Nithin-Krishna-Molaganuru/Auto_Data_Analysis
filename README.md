@@ -75,16 +75,6 @@ Render
 Vercel (via Python backend)
 
 
-🧩 Folder Structure
-AutoDA/
-│
-├── app.py                # Main Streamlit application
-├── requirements.txt      # Project dependencies
-├── README.md             # Project documentation
-├── data/                 # Uploaded datasets (ignored in .gitignore)
-└── assets/               # Visuals, logos, or static files
-
-
 
 🔍 Example Use Case
 
