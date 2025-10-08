@@ -37,13 +37,13 @@ def generate_eda_report(df, target_column=None):
     with open(tmp_file, "rb") as f:
         report_bytes = f.read()
 
-    # Streamlit download button
-    st.download_button(
-        label="Download EDA Report",
-        data=report_bytes,
-        file_name=os.path.basename(tmp_file),
-        mime="text/html",
-    )
+    # # Streamlit download button
+    # st.download_button(
+    #     label="Download EDA Report",
+    #     data=report_bytes,
+    #     file_name=os.path.basename(tmp_file),
+    #     mime="text/html",
+    # )
 
     # Optionally show it inside Streamlit
     with open(tmp_file, "r", encoding="utf-8") as f:
