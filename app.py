@@ -10,7 +10,7 @@ import io
 
 # ---- Streamlit Page Setup ----
 st.set_page_config(page_title="Automated Data Analysis", layout="wide")
-st.markdown("<h1 style='text-align: center; font-size: 75px;'>📊 Automated Data Analysis</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 72px;'>📊 Automated Data Analysis</h1>", unsafe_allow_html=True)
 st.subheader("Only for smaller datasets")
 
 
