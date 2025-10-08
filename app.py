@@ -10,7 +10,7 @@ import io
 
 # ---- Streamlit Page Setup ----
 st.set_page_config(page_title="Automated Data Analysis", layout="wide")
-st.title("📊 Automated Data Analysis")
+st.markdown("<h1 style='text-align: center; font-size: 75px;'>📊 Automated Data Analysis</h1>", unsafe_allow_html=True)
 st.subheader("Only for smaller datasets")
 
 
@@ -47,10 +47,11 @@ if uploaded:
 
 # ---- Run Preprocessing ----
 if st.session_state.df is not None:
-    if st.button("Run Preprocessing"):
-        st.session_state.df_clean = preprocess(st.session_state.df)
-        st.session_state.preprocess_ran = True
-        st.success("✅ Preprocessing Completed")
+    if st.session_state.preprocess_ran != True:
+        if st.button("Run Preprocessing"):
+            st.session_state.df_clean = preprocess(st.session_state.df)
+            st.session_state.preprocess_ran = True
+            st.success("✅ Preprocessing Completed")
 
 # --- Display only if preprocessing was actually run ---
 if st.session_state.preprocess_ran and st.session_state.df_clean is not None:
