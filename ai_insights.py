@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 API_URL = "https://router.huggingface.co/v1/chat/completions"
-HF_TOKEN = st.secrets.get("HF_TOKEN")
+HF_TOKEN = st.secrets.get("Auto_DA")
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}  # Make sure HF_TOKEN is set in environment
 
 def generate_ai_insights(df: pd.DataFrame, target_col: str, task_type: str):
