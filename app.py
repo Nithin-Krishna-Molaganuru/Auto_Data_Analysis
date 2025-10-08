@@ -86,13 +86,20 @@ if st.session_state.df is not None:
 # --- Display EDA Report only if it was generated ---
 if st.session_state.eda_ran and st.session_state.eda_file is not None:
     if os.path.exists(st.session_state.eda_file):
+        # Read the report content for download
+        with open(st.session_state.eda_file, "rb") as f:
+            report_bytes = f.read()
+
         # Streamlit download button
         st.download_button(
             label="Download EDA Report",
             data=report_bytes,
-            file_name=os.path.basename(tmp_file),
+            file_name=os.path.basename(st.session_state.eda_file),
             mime="text/html",
         )
+        # Optionally show it inside Streamlit
+        with open(st.session_state.eda_file, "r", encoding="utf-8") as f:
+            st.components.v1.html(f.read(), height=800, scrolling=True)
 
 
 
