@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 import numpy as np
 
-API_URL = "https://router.huggingface.co/v1/chat/completions"
+API_URL = "https://openrouter.ai/api/v1/chat/completions"
 HF_TOKEN = st.secrets.get("Auto_DA")
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}  # Make sure HF_TOKEN is set in environment
 
@@ -47,7 +47,7 @@ def generate_ai_insights(df: pd.DataFrame, target_col: str, task_type: str):
     ]
 
     payload = {
-        "model": "Qwen/Qwen2.5-7B:featherless-ai",  # Replace with your desired chat model
+        "model": "google/gemma-3-27b-it:free",  # Replace with your desired chat model
         "messages": messages,
         "temperature": 0.0
     }
